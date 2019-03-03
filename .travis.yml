@@ -8,6 +8,9 @@ branches:
 install:
 - npm install aws-cli
 
+script:
+- echo "hello"
+
 deploy:
   provider: script
   script: build.sh
