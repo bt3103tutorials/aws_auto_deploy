@@ -1,7 +1,14 @@
-language: python
-python: "3.6"
-install: 
-  - pip install -r requirements.txt
+language: node_js
+node_js:
+- '8'
+cache: npm
+branches:
+  only:
+  - master
+install:
+- npm install
+
 deploy:
   provider: script
   script: build.sh
+  skip_cleanup: true
