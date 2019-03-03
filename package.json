@@ -3,6 +3,4 @@
     "version": "1.0.0",
     "description": "nth",
     "author": "breadplop",
-    "private": true,
-    "scripts": {
-    }
+    "private": true
