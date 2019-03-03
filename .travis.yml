@@ -6,7 +6,7 @@ branches:
   only:
   - master
 install:
-- npm install
+- npm install aws-cli
 
 deploy:
   provider: script
