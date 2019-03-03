@@ -12,6 +12,12 @@ script:
 - echo "hello"
 
 deploy:
-  provider: script
-  script: build.sh
+  provider: lambda
+  function_name: "myLambdaFunction"
+  region: "us-east-2"
+  role: "arn:aws:iam::447085553420:role/service-role/lambdatest"
+  runtime: "python3.6"
+  handler_name: "lambda_function.lambda_handler",
+  access_key_id: $AWS_ACCESS_KEY_ID,
+  secret_access_key: $AWS_SECRET_ACCESS_KEY,
   skip_cleanup: true
